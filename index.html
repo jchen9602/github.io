@@ -1,112 +1,109 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-		<title>My Heart</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <link type="text/css" rel="stylesheet" href="./who/default.css">
+    <title>My Heart</title>
 
-		<script type="text/javascript" src="./who/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./who/default.css">
 
-		<script type="text/javascript" src="./who/jscex.min.js"></script>
+    <script type="text/javascript" src="./who/jquery.min.js"></script>
 
-		<script type="text/javascript" src="./who/jscex-parser.js"></script>
+    <script type="text/javascript" src="./who/jscex.min.js"></script>
 
-		<script type="text/javascript" src="./who/jscex-jit.js"></script>
+    <script type="text/javascript" src="./who/jscex-parser.js"></script>
 
-		<script type="text/javascript" src="./who/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./who/jscex-jit.js"></script>
 
-		<script type="text/javascript" src="./who/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./who/jscex-builderbase.min.js"></script>
 
-		<script type="text/javascript" src="./who/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./who/jscex-async.min.js"></script>
 
-		<script type="text/javascript" src="./who/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./who/jscex-async-powerpack.min.js"></script>
 
-		<script type="text/javascript" src="./who/love.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./who/functions.js" charset="utf-8"></script>
 
-	    <style type="text/css">
+    <script type="text/javascript" src="./who/love.js" charset="utf-8"></script>
 
-<!--
+    <style type="text/css">
+        < !-- .STYLE1 {
+            color: #666666
+        }
 
-.STYLE1 {color: #666666}
-
--->
-
-        </style>
+        -->
+    </style>
 
 </head>
 
-    <body>
+<body>
 
-			<audio autoplay="autopaly">
+    <audio autoplay="autopaly">
 
-					<source src="who.mp3" type="audio/mp3" />
+        <source src="who.mp3" type="audio/mp3" />
 
-			</audio>  
+    </audio>
 
-        <div id="main">
+    <div id="main">
 
-            <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
+        <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a
+                href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
+                href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
 
-             <div id="wrap">
+        <div id="wrap">
 
-                <div id="text">
+            <div id="text">
 
-			        <div id="code">
+                <div id="code">
 
-			      <font color="#FF0000">  	<span class="say"></span><br>
+                    <font color="#FF0000"> <span class="say"></span><br>
 
-						<span class="say"> </span><br>
+                        <span class="say"> </span><br>
 
-<span class="say"></span><br>
+                        <span class="say"></span><br>
 
-						<span class="say"> </span><br>
+                        <span class="say"> </span><br>
 
-						
+                        <span class="say"></span><br>
 
-						
+                        <span class="say"></span><br>
 
-			        	
+                        <span class="say"></span><br>
 
-			        	<span class="say"></span><br>
+                        <span class="say"></span><br>
 
-<span class="say"></span><br>
-
-<span class="say"></span><br>
-
-
-
- <span class="say"></span><br>
-
-						<span class="say"> </span><br>
+                        <span class="say"> </span><br>
 
                         <span class="say"><span class="space"></span></span>
 
-			  </font></p>
-
-      </div>
+                    </font>
+                    </p>
 
                 </div>
 
-                <div id="clock-box">
+            </div>
 
-                    <span class="STYLE1"></span><font color="#33CC00"></font>
+            <div id="clock-box">
 
-<span class="STYLE1"></span>
+                <span class="STYLE1"></span>
+                <font color="#33CC00"></font>
 
-                
+                <span class="STYLE1"></span>
 
-              </div>
-
-                <canvas id="canvas" width="1100" height="680"></canvas>
+                <div id='clock'></div>
 
             </div>
 
-            
+            <canvas id="canvas" width="1100" height="680"></canvas>
 
         </div>
 
-    
+
+
+    </div>
+
+
 
     <script>
 
@@ -116,317 +113,319 @@
 
     <script>
 
-    (function(){
+        (function () {
 
-        var canvas = $('#canvas');
-
-		
-
-        if (!canvas[0].getContext) {
-
-            $("#error").show();
-
-            return false;        }
+            var canvas = $('#canvas');
 
 
 
-        var width = canvas.width();
+            if (!canvas[0].getContext) {
 
-        var height = canvas.height();        
+                $("#error").show();
 
-        canvas.attr("width", width);
+                return false;
+            }
 
-        canvas.attr("height", height);
 
-        var opts = {
 
-            seed: {
+            var width = canvas.width();
 
-                x: width / 2 - 20,
+            var height = canvas.height();
 
-                color: "rgb(190, 26, 37)",
+            canvas.attr("width", width);
 
-                scale: 2
+            canvas.attr("height", height);
 
-            },
+            var opts = {
 
-            branch: [
+                seed: {
 
-                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    x: width / 2 - 20,
 
-                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                    color: "rgb(190, 26, 37)",
 
-                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    scale: 2
 
-                    ]],
+                },
 
-                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                branch: [
 
-                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    [535, 680, 570, 250, 500, 200, 30, 100, [
 
-                    ]],
+                        [540, 500, 455, 417, 340, 400, 13, 100, [
 
-                    [539, 281, 537, 248, 534, 217, 3, 40],
+                            [450, 435, 434, 430, 394, 395, 2, 40]
 
-                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        ]],
 
-                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [550, 445, 600, 356, 680, 345, 12, 100, [
 
-                        [498, 345, 435, 315, 395, 330, 4, 60]
+                            [578, 400, 648, 409, 661, 426, 3, 80]
 
-                    ]],
+                        ]],
 
-                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [539, 281, 537, 248, 534, 217, 3, 40],
 
-                        [590, 293, 646, 277, 648, 271, 2, 80]
+                        [546, 397, 413, 247, 328, 244, 9, 80, [
+
+                            [427, 286, 383, 253, 371, 205, 2, 40],
+
+                            [498, 345, 435, 315, 395, 330, 4, 60]
+
+                        ]],
+
+                        [546, 357, 608, 252, 678, 221, 6, 100, [
+
+                            [590, 293, 646, 277, 648, 271, 2, 80]
+
+                        ]]
 
                     ]]
 
-                ]] 
+                ],
 
-            ],
+                bloom: {
 
-            bloom: {
+                    num: 700,
 
-                num: 700,
+                    width: 1080,
 
-                width: 1080,
+                    height: 650,
 
-                height: 650,
+                },
 
-            },
+                footer: {
 
-            footer: {
+                    width: 1200,
 
-                width: 1200,
+                    height: 5,
 
-                height: 5,
+                    speed: 10,
 
-                speed: 10,
-
-            }
-
-        }
-
-
-
-        var tree = new Tree(canvas[0], width, height, opts);
-
-        var seed = tree.seed;
-
-        var foot = tree.footer;
-
-        var hold = 1;
-
-
-
-        canvas.click(function(e) {
-
-            var offset = canvas.offset(), x, y;
-
-            x = e.pageX - offset.left;
-
-            y = e.pageY - offset.top;
-
-            if (seed.hover(x, y)) {
-
-                hold = 0; 
-
-                canvas.unbind("click");
-
-                canvas.unbind("mousemove");
-
-                canvas.removeClass('hand');
+                }
 
             }
 
-        }).mousemove(function(e){
 
-            var offset = canvas.offset(), x, y;
 
-            x = e.pageX - offset.left;
+            var tree = new Tree(canvas[0], width, height, opts);
 
-            y = e.pageY - offset.top;
+            var seed = tree.seed;
 
-            canvas.toggleClass('hand', seed.hover(x, y));
+            var foot = tree.footer;
 
-        });
+            var hold = 1;
 
 
 
-        var seedAnimate = eval(Jscex.compile("async", function () {
+            canvas.click(function (e) {
 
-            seed.draw();
+                var offset = canvas.offset(), x, y;
 
-            while (hold) {
+                x = e.pageX - offset.left;
 
-                $await(Jscex.Async.sleep(10));
+                y = e.pageY - offset.top;
 
-            }
+                if (seed.hover(x, y)) {
 
-            while (seed.canScale()) {
+                    hold = 0;
 
-                seed.scale(0.95);
+                    canvas.unbind("click");
 
-                $await(Jscex.Async.sleep(10));
+                    canvas.unbind("mousemove");
 
-            }
+                    canvas.removeClass('hand');
 
-            while (seed.canMove()) {
+                }
 
-                seed.move(0, 2);
+            }).mousemove(function (e) {
+
+                var offset = canvas.offset(), x, y;
+
+                x = e.pageX - offset.left;
+
+                y = e.pageY - offset.top;
+
+                canvas.toggleClass('hand', seed.hover(x, y));
+
+            });
+
+
+
+            var seedAnimate = eval(Jscex.compile("async", function () {
+
+                seed.draw();
+
+                while (hold) {
+
+                    $await(Jscex.Async.sleep(10));
+
+                }
+
+                while (seed.canScale()) {
+
+                    seed.scale(0.95);
+
+                    $await(Jscex.Async.sleep(10));
+
+                }
+
+                while (seed.canMove()) {
+
+                    seed.move(0, 2);
+
+                    foot.draw();
+
+                    $await(Jscex.Async.sleep(10));
+
+                }
+
+            }));
+
+
+
+            var growAnimate = eval(Jscex.compile("async", function () {
+
+                do {
+
+                    tree.grow();
+
+                    $await(Jscex.Async.sleep(10));
+
+                } while (tree.canGrow());
+
+            }));
+
+
+
+            var flowAnimate = eval(Jscex.compile("async", function () {
+
+                do {
+
+                    tree.flower(2);
+
+                    $await(Jscex.Async.sleep(10));
+
+                } while (tree.canFlower());
+
+            }));
+
+
+
+            var moveAnimate = eval(Jscex.compile("async", function () {
+
+                tree.snapshot("p1", 240, 0, 610, 680);
+
+                while (tree.move("p1", 500, 0)) {
+
+                    foot.draw();
+
+                    $await(Jscex.Async.sleep(10));
+
+                }
 
                 foot.draw();
 
-                $await(Jscex.Async.sleep(10));
+                tree.snapshot("p2", 500, 0, 610, 680);
 
-            }
 
-        }));
 
+                // 会有闪烁不得意这样做, (＞﹏＜)
 
+                canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
 
-        var growAnimate = eval(Jscex.compile("async", function () {
+                canvas.css("background", "#ffe");
 
-            do {
+                $await(Jscex.Async.sleep(300));
 
-    	        tree.grow();
+                canvas.css("background", "none");
 
-                $await(Jscex.Async.sleep(10));
+            }));
 
-            } while (tree.canGrow());
 
-        }));
 
+            var jumpAnimate = eval(Jscex.compile("async", function () {
 
+                var ctx = tree.ctx;
 
-        var flowAnimate = eval(Jscex.compile("async", function () {
+                while (true) {
 
-            do {
+                    tree.ctx.clearRect(0, 0, width, height);
 
-    	        tree.flower(2);
+                    tree.jump();
 
-                $await(Jscex.Async.sleep(10));
+                    foot.draw();
 
-            } while (tree.canFlower());
+                    $await(Jscex.Async.sleep(25));
 
-        }));
+                }
 
+            }));
 
 
-        var moveAnimate = eval(Jscex.compile("async", function () {
 
-            tree.snapshot("p1", 240, 0, 610, 680);
+            var textAnimate = eval(Jscex.compile("async", function () {
 
-            while (tree.move("p1", 500, 0)) {
+                var together = new Date();
 
-                foot.draw();
+                together.setFullYear(2019, 4, 17); 			//时间年月日
 
-                $await(Jscex.Async.sleep(10));
+                together.setHours(23);						//小时
 
-            }
+                together.setMinutes(33);					//分钟
 
-            foot.draw();
+                together.setSeconds(5);					//秒前一位
 
-            tree.snapshot("p2", 500, 0, 610, 680);
+                together.setMilliseconds(2);				//秒第二位
 
 
 
-            // 会有闪烁不得意这样做, (＞﹏＜)
+                $("#code").show().typewriter();
 
-            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+                $("#clock-box").fadeIn(500);
 
-            canvas.css("background", "#ffe");
+                while (true) {
 
-            $await(Jscex.Async.sleep(300));
+                    timeElapse(together);
 
-            canvas.css("background", "none");
+                    $await(Jscex.Async.sleep(1000));
 
-        }));
+                }
 
+            }));
 
 
-        var jumpAnimate = eval(Jscex.compile("async", function () {
 
-            var ctx = tree.ctx;
+            var runAsync = eval(Jscex.compile("async", function () {
 
-            while (true) {
+                $await(seedAnimate());
 
-                tree.ctx.clearRect(0, 0, width, height);
+                $await(growAnimate());
 
-                tree.jump();
+                $await(flowAnimate());
 
-                foot.draw();
+                $await(moveAnimate());
 
-                $await(Jscex.Async.sleep(25));
 
-            }
 
-        }));
+                textAnimate().start();
 
 
 
-        var textAnimate = eval(Jscex.compile("async", function () {
+                $await(jumpAnimate());
 
-		    var together = new Date();
+            }));
 
-		    together.setFullYear(2015,7 , 15); 			//时间年月日
 
-		    together.setHours(13);						//小时
 
-		    together.setMinutes(14);					//分钟
+            runAsync().start();
 
-		    together.setSeconds(5);					//秒前一位
-
-		    together.setMilliseconds(2);				//秒第二位
-
-
-
-		    $("#code").show().typewriter();
-
-            $("#clock-box").fadeIn(500);
-
-            while (true) {
-
-                timeElapse(together);
-
-                $await(Jscex.Async.sleep(1000));
-
-            }
-
-        }));
-
-
-
-        var runAsync = eval(Jscex.compile("async", function () {
-
-            $await(seedAnimate());
-
-            $await(growAnimate());
-
-            $await(flowAnimate());
-
-            $await(moveAnimate());
-
-
-
-            textAnimate().start();
-
-
-
-            $await(jumpAnimate());
-
-        }));
-
-
-
-        runAsync().start();
-
-    })();
+        })();
 
     </script>
 
 
 
-    </body></html>
+</body>
 
+</html>
